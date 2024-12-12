@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow:hidden;
+    }
+
+    @font-face {
+        font-family: Canela;
+        src: url(/Fonts/CanelaCondensed-Medium-Trial.otf);
+    }
+
+    @font-face {
+        font-family: Gemini-Regular;
+        src: url(/Fonts/Gemini-Regular.otf);
+    }
+
+    .top-bar {
+        background-color: #d1d1d1;
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(161, 161, 161);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 770px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        font-family: MsSans;
+        transition: font-size 0.3s ease, grid-gap 0.3s ease;
+    }
+
+    .sub-top-bar {
+        background-color: #d1d1d1;
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(161, 161, 161);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 70px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-family: MsSans;
+    }
+
+    .cross-box {
+        background-color: #bababa;
+        background-image: url("https://img1.picmix.com/output/stamp/normal/8/1/2/0/2500218_ff2e5.gif");
+        background-size: cover;
+        border-top: ridge 3px #7a7a7a;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(217, 217, 217);
+        width: 40px;
+        height: 40px;
+        /* display: flex;
+        justify-content: left; */
+    }
+
+   
+    p {
+        font-size: 17px;
+    }
+
+    .background-container {
+        /* margin: 10px 10px 10px; */
+        background-color: #f3d6ff;
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        max-width: 100%;
+        height: 92vh;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .background-container-1 {
+        /* margin: 10px 10px 10px; */
+        background-color: #f3d6ff;
+        height: 92vh;
+        flex: 30%;
+        display: flex;
+        flex-direction: row;
+
+    }
+
+    .background-container-1-column {
+        /* margin: 10px 10px 10px; */
+        background-color: #f3d6ff;
+        height: 92vh;
+        flex: 100%;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .scroll-container {
+        /* width: 400px; */
+        /* Set a fixed width for the container */
+        height: 50vh;
+        /* Set a fixed height for the container */
+        overflow-y: auto;
+        /* Enable vertical scrolling if content exceeds height */
+        border: 1px solid #ccc;
+        /* Optional: Border around the scroll container */
+        padding: 10px;
+        /* Optional: Add padding inside the container */
+        background-color: rgb(253, 241, 255);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+    }
+
+    .scroll-container::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .scroll-container::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .scroll-container::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .shop-container {
+        height: 25vh;
+        border-top: ridge 4px #cdcdcd;
+        border-bottom: ridge 4px rgb(211, 211, 211);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(217, 217, 217);
+        padding: 10px;
+        background-size: cover;
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        background-image:url(https://m.media-amazon.com/images/S/pv-target-images/874553ac45bf59b1ef51f65dc84f769cf24acd19503e9f1ab98dddbf3181afed._SX1080_FMjpg_.jpg);
+        background-size: cover;
+    }
+
+    .imagescontainer {
+        flex: 25%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .background-container-2 {
+        /* margin: 10px 10px 10px; */
+        /* background-color: #f3d6ff; */
+        flex: 70%;
+        height: 92vh;
+        display: flex;
+        flex-direction: row;
+        
+    }
+
+    .side-bar {
+        flex: 20%;
+        height: 80vh;
+        padding: 20px;
+        display: flex;
+        background-color: #cacaca;
+        justify-content: center;
+        border-top: ridge 3px #3e3e3e;
+        border-bottom: ridge 4px rgb(222, 222, 222);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(110, 110, 110);
+    }
+
+    .madhuri-box-container {
+        flex: 50%;
+        height: 35vh;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 10px 30px;
+        justify-content: center;
+    }
+
+    .madhuri-box {
+        background-color: #bababa;
+        border-top: ridge 3px #3e3e3e;
+        border-bottom: ridge 4px rgb(222, 222, 222);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(110, 110, 110);
+        width: 60px;
+        height: 60px;
+    }
+
+    .background {
+    flex: 70%;
+    display: flex;
+    flex-direction: column;
+    height: 80vh;
+    padding: 0px;
+    background-color: #cacaca;
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/425/201/190/women-model-actress-face-necklace-hd-wallpaper-preview.jpg);
+    background-size: cover;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    border-top: ridge 3px #3e3e3e;
+    border-bottom: ridge 4px rgb(222, 222, 222);
+    border-right: ridge 4px rgb(255, 255, 255);
+    border-left: ridge 4px rgb(110, 110, 110);
+}
+
+.purple-heart {
+    background-image: url(https://img1.picmix.com/output/stamp/normal/5/9/2/6/526295_c62fe.gif);
+    background-size: cover;
+    width: 70%; /* Define width */
+    height: 70%; /* Define height */
+    /* border: ridge 3px #3e3e3e; */
+    display: flex; /* Make it a flex container */
+    justify-content: center; /* Center child items horizontally */
+    align-items: center; /* Center child items vertically */
+    margin: 0 auto; /* Center the element itself within its parent */
+
+}
+
+
+    .image {
+        background-color: #f3d6ff;
+        background-image: url(https://i.pinimg.com/originals/ad/b0/a7/adb0a77350b8ee95a09ceccaabefc34c.gif);
+        background-size: cover;
+        border-bottom: ridge 3px #f7f7f7;
+        border-top: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(204, 204, 204);
+        width: 400px;
+        height: 200px;
+
+    }
+
+    img{
+        src: ;
+    }
+
+
+    .title {
+        font-family: Canela;
+        font-size: 4.9vw;
+        color: rgb(255, 0, 179);
+        padding: 0px;
+        text-shadow: rgb(85, 0, 255) 2px 2px 1px;
+        text-align: center;
+        max-width: 100%; 
+        word-wrap: break-word; 
+        padding-bottom: 5%;
+       
+
+    }
+
+    .headlines {
+        font-family: Canela;
+        font-size: 0.6vw;
+        color: rgb(115, 0, 255);
+        text-align: center;
+        padding: 20px;
+        background-color: rgb(213, 194, 213);
+        background-image: linear-gradient(rgb(239, 172, 244), rgb(254, 212, 255));
+        border-radius: 60%;
+        border-bottom: ridge 3px #f7f7f7;
+        border-top: ridge 4px rgb(60, 60, 60);
+        position: absolute; 
+        right: 1%;
+        max-width: 90%; 
+    }
+
+    .headlines:hover {
+        transform: scale(1.4);
+        /* Slightly increase size on hover */
+        background-image: linear-gradient(rgb(255, 239, 255), rgb(252, 211, 255));
+        transition: 0.5s;
+    }
+
+    .news {
+        font-family: Gemini-Regular;
+        font-size: 100px;
+        color: rgb(255, 255, 255);
+        padding-top: 10px;
+        text-shadow: rgb(4, 255, 0) 1px 1px 1px;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .boximages {
+        font-family: Gemini-Regular;
+        font-size: 40px;
+        color: rgb(255, 0, 0);
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+        border-bottom: ridge 3px #f7f7f7;
+        border-top: ridge 4px rgb(99, 66, 111);
+        background-image: linear-gradient(rgb(225, 149, 230), rgb(255, 234, 255));
+        border-radius: 60%;
+        text-align: center;
+        padding-bottom: 20px;
+        padding-top: 30px;
+
+    }
+
+    .infopanel {
+        padding: 20px;
+        background-color: rgb(217, 0, 255);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 20%;
+        height: 50%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transition: opacity 0.3s ease, visibility 0s 0.3s;
+        overflow-y: auto;
+    }
+
+
+    .infopanel::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .infopanel::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .infopanel::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .infopanel.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+    .infopanel-2 {
+        padding: 20px;
+        background-color: rgb(18, 0, 85);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 20%;
+        height: 40%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 45%;
+        left: 60%;
+        transition: opacity 0.3s ease, visibility 0s 0.3s;
+        overflow-y: auto;
+    }
+
+
+    .infopanel-2::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .infopanel-2::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .infopanel-2::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .infopanel-2.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+    .infopanel-3 {
+        padding: 20px;
+        background-color: rgb(255, 0, 0);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 20%;
+        height: 30%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 55%;
+        left: 30%;
+        transition: opacity 0.3s ease, visibility 0s 0.3s;
+        overflow-y: auto;
+    }
+
+
+    .infopanel-3::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .infopanel-3::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .infopanel-3::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .infopanel-3.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+    .infopanel-4 {
+        padding: 20px;
+        background-color: rgb(117, 117, 117);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 20%;
+        height: 50%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 20%;
+        left: 70%;
+        transition: opacity 0.3s ease, visibility 0s 0.3s;
+        overflow-y: auto;
+    }
+
+
+    .infopanel-4::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .infopanel-4::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .infopanel-4::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .infopanel-4.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+
+    @media only screen and (max-width: 599px) {
+    .top-bar {
+        font-size: 15px;
+        grid-gap: 38%;
+        flex-direction: column;
+    }
+    .sub-top-bar {
+        font-size: 12px;
+    }
+
+    .background-container {
+        flex-direction: column;
+    }
+
+    .background-container-1 {
+        flex: 50%;
+    }
+
+    .background-container-2 {
+        height: 100vh;
+    }
+
+    .side-bar {
+        height: 80vh;
+    }
+
+    .madhuri-box-container {
+        grid-template-columns: auto;
+    }
+
+    .imagescontainer {
+        flex: 75%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 50vh;
+    }
+
+    .purple-heart {
+        width: 50%; 
+        height: 50%;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px to 767px) */
+@media only screen and (min-width: 600px) {
+    .top-bar {
+        font-size: 17px;
+        grid-gap: 38%;
+    }
+
+    .background-container {
+        flex-direction: column;
+    }
+
+    .background-container-1 {
+        flex: 50%;
+    }
+
+    .background-container-2 {
+        height: 100vh;
+    }
+
+    .side-bar {
+        height: 100vh;
+    }
+
+    .madhuri-box-container {
+        grid-template-columns: auto;
+    }
+
+    .imagescontainer {
+        flex: 85%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 37vh;
+    }
+
+    .purple-heart {
+        width: 40%; 
+        height: 40%;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px to 991px) */
+@media only screen and (min-width: 768px) {
+    .top-bar {
+        font-size: 17px;
+        grid-gap: 39%;
+    }
+
+    .background-container {
+        flex-direction: column;
+    }
+
+    .background-container-1 {
+        flex: 50%;
+    }
+
+    .background-container-2 {
+        height: 92vh;
+    }
+
+    .side-bar {
+        height: 90vh;
+    }
+
+    .madhuri-box-container {
+        grid-template-columns: auto auto;
+    }
+
+    .imagescontainer {
+        flex: 65%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        height: 37vh;
+    }
+
+    .purple-heart {
+        width: 50%; 
+        height: 50%;
+    }
+
+    .title {
+        padding-bottom: 2%;
+    }
+
+}
+
+/* Large devices (laptops/desktops, 992px to 1199px) */
+@media only screen and (min-width: 992px) {
+    .top-bar {
+        font-size: 17px;
+        grid-gap: 40%;
+    }
+
+    .background-container {
+        flex-direction: row;
+    }
+
+    .background-container-1 {
+        flex: 30%;
+    }
+
+    .background-container-2 {
+        height: 92vh;
+    }
+
+    .side-bar {
+        height: 80vh;
+    }
+
+    .madhuri-box-container {
+        grid-template-columns: auto auto;
+    }
+
+    .imagescontainer {
+        flex: 25%;
+        height: 80vh;
+    }
+
+    .purple-heart {
+        width: 50%; 
+        height: 50%;
+    }
+
+    .title {
+        padding-bottom: 5%;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .top-bar {
+        font-size: 20px;
+        grid-gap: 43%;
+    }
+
+    .sub-top-bar {
+        font-size: 15px;
+    }
+
+    .background-container {
+        flex-direction: row;
+    }
+
+    .background-container-1 {
+        flex: 30%;
+    }
+
+    .background-container-2 {
+        height: 92vh;
+    }
+
+    .side-bar {
+        height: 80vh;
+    }
+
+    .madhuri-box-container {
+        grid-template-columns: auto auto auto;
+    }
+
+    .imagescontainer {
+        flex: 25%;
+        height: 80vh;
+    }
+
+    .purple-heart {
+        width: 70%; 
+        height: 70%;
+    }
+
+    .title {
+        padding-bottom: 5%;
+    }
+
+    a {
+    text-decoration: none; 
+    color: inherit;
+  }
+
+  a:visited {
+    color: inherit; 
+    text-decoration: none; 
+  }
+
+  a:hover {
+    text-decoration: none; 
+  }
+
+  a:active {
+    text-decoration: none; 
+  }
+    
+}
+
+
+
+</style>
+
+<body>
+    <div class="top-bar">
+        <div class="cross-box"></div>
+        <div>  <a href="/index.html"> It's Controversial </a> </div>
+        <div class="cross-box"></div>
+    </div>
+
+    <div class="sub-top-bar" style=" height: 30px; border-bottom: ridge 0px rgb(207, 207, 207);">
+        <div> </div>
+        <a href="https://caravanmagazine.in/reportage/queen" target="_blank" style="text-decoration: none;">
+            <div>For full article go to https://caravanmagazine.in/reportage/queen </div>
+        </a>
+        <div></div>
+    </div>
+    
+
+        <a href="https://www.moneycontrol.com/lifestyle/madhuri-dixit-winter-fashion-inspiration-bold-beautiful-and-bossy-classy-winter-fashion-visual-story-2675654.html"
+            target="_blank" style="text-decoration: none;">
+            <div class="headlines" style="position: absolute; top: 200px;">
+                9 ways Madhuri Dixit's bold, beautiful, bossy fashion bowled us
+            </div>
+        </a>
+        <a href="https://www.pinterest.com/pin/678073287626720001/" target="_blank" style="text-decoration: none;">
+            <div class="headlines" style="top:300px ;">60 Rare Photos of Young &
+                Beautiful Madhuri Dixit</div>
+        </a>
+        <a href="https://www.gettyimages.in/photos/madhuri-dixit?page=2" target="_blank" style="text-decoration: none;">
+            <div class="headlines" style=" top:400px ;">11 Hd wallpaper ideas | madhuri
+                dixit</div>
+        </a>
+        <a href="https://www.herzindagi.com/society-culture/madhuri-dixit-birthday-special-unseen-childhood-rare-pictures-bollywood-dance-queen-slideshow-12181"
+            target="_blank" style="text-decoration: none;">
+            <div class="headlines" style=" top:500px ;">These Unseen Childhood Pictures
+                Of Madhuri Dixit </div>
+        </a>
+        <a href="https://www.instagram.com/madhuridixitnene/?hl=en" target="_blank" style="text-decoration: none;">
+            <div class="headlines" style=" top:600px ;">Madhuri Dixit
+                (@madhuridixitnene)</div>
+        </a>
+        <a href="https://www.masalathai.com/style-evolution-madhuri-dixit-nene/" target="_blank"
+            style="text-decoration: none;">
+            <div class="headlines" style=" top:700px ;">Style Evolution: Madhuri Dixit
+                Nene</div>
+        </a>
+
+
+
+ <div class="background-container">
+        <div class="background-container-1">
+            <div class="background-container-1-column">
+
+            <div class="scroll-container" style="background-color: #dcf1ff; height: 200px; padding: 0px; ">
+                <div class="image"></div>
+                <br>
+                <div class="image" style="background-image:url(https://i.makeagif.com/media/1-25-2023/Cc2R2d.gif);">
+                </div>
+                <br>
+                <div class="image"
+                    style="background-image:url(https://64.media.tumblr.com/4bc70487028fbf7f341f6d78fbced3d3/tumblr_n2kig7Lgbr1rcl0e9o1_250.gif);">
+                </div>
+
+            </div>
+
+            <div class="scroll-container">
+                <p>SCENE-STEALING INGÉNUE TO PINUP GODDESS, through magnificence and misstep, Madhuri Dixit has always
+                    been worth watching. She has sobbed, snickered and shimmied through movies of varying quality—taking
+                    on both clichés and surprises with equal brio—and the mesmerised masses have lapped it up. By the
+                    numbers, she is Hindi cinema’s most successful heroine of all time: the highest paid actress, and
+                    the only one ever to get paid as much as her leading men. She has bested any so-called rivals, been
+                    billed above the biggest actors, and, in an industry defined by songs, shown us the most
+                    unforgettable dances of all.</p>
+                <br>
+                <p>The last three decades have seen her celebrated, deified, dreamed of and craved. In 2001, Pakistan’s
+                    then president, Pervez Musharraf, sounded almost wistful when, at the Agra Summit, he remembered
+                    Pakistani fans at a Sharjah cricket match singing “Madhuri de do, Kashmir le lo” (Give us Madhuri,
+                    take Kashmir) to the tune of ‘Joote de do, paise le lo,’ a song from the bootleg-inspiring Hum Aapke
+                    Hain Koun.</p>
+                <br>
+                <p>Her acting proved to be as impressive as her screen presence; the star often gleamed in films duller
+                    than the tired old tins their reels were packed in. Her eyes sparkled with eagerness, and a
+                    seemingly effortless spontaneity coloured her performances even in failed films; an infectious
+                    energy carried her through moments of tremendous farce as well as painful melodrama. Looking back
+                    at, say, the absurd Deewana Mujh Sa Nahin (1990)—where Dixit had to contend with portraying an
+                    annoying character, the worst wardrobe imaginable, and an obsessive stalker, in the form of Aamir
+                    Khan at his most cutesy—her innate charisma is still evident. As with all actors the camera adores,
+                    even her lowest points are worth smiling at, and often show remarkable untapped potential. </p>
+                <br>
+                <p>It is a potential which may soon bear fruit, at last. While Madhuri Dixit may seem to have
+                    proverbially done it all, she is now—having returned to the movies after a hiatus of some
+                    length—picking radical roles and sharp filmmakers. Our cinema, staunch in its dated ways, isn’t
+                    prepared for her refusal to go quietly into the twilight of supporting roles. She may not command
+                    the numbers she once did, she may not be the starlet setting young men afire, but she is
+                    unquestionably, defiantly—almost inexplicably—still a superstar. What she does makes a difference,
+                    and she could alter how Hindi cinema treats its heroines. Dixit’s experimental films never showed up
+                    vividly against the light of her considerable filmography, because her mainstream hits always
+                    dwarfed them. But, thirty years after she first showed up on screen, Dixit appears keener than ever
+                    to shake up the status quo—if only to make room for herself, one more time. </p>
+                <br>
+                <p>Madhuri Dixit movies aren’t what they used to be. In one of her two 2014 releases, she played a
+                    poetry-fetishising empress in love with her handmaiden; in the other, a parkour-trained outlaw quick
+                    with mid-air kicks. Both were huge risks for a megastar in an industry not used to rewarding bold
+                    choices. Playing a gay aesthete in January before playing Rajinikanth in March—there has never been
+                    anything quite like it.</p>
+                <br>
+                <p>In the Andheri conference room where we met, Dixit, now forty-six years old, sounded content about
+                    the new films. “I’m trying to think of any movie in the past,” she said of Gulaab Gang, the action
+                    film, “that, in that setting of a Bollywood potboiler, has women in the key roles. A movie with all
+                    the masala, all the dialogue-baazi, and yet with a female protagonist and antagonist.” Based loosely
+                    on the crusading Uttar Pradesh vigilante Sampat Pal and her brigade of pink-saree-clad women, Soumik
+                    Sen’s film was hardline commercial cinema, a movie unsubtle enough to have starred, say, Akshay
+                    Kumar. “That a woman was playing that kind of a role was fascinating, I thought, because it changes
+                    the rules in one go,” Dixit said. “It’s like throwing down a bowling ball and watching the pins go
+                    flying.”</p>
+                <br>
+                <p>Gulaab Gang is not a great film, although there is a definite thrill in watching Dixit swagger about
+                    kneeing rogues in the chest. She enacts her role with a marked dignity; but the best part of her
+                    performance might simply be that she took on a film so unlikely: an old-school movie by a rookie
+                    director, with a lower budget than Dixit, or the action-cinema genre, is used to. “The film also
+                    spoke about women’s rights and education, and society in general,” she said. “It was a statement on
+                    what’s happening around us: laws need to be stronger; we have this whole infrastructure and yet
+                    nothing really happens. There were a lot of things that made me do Gulaab Gang.” One of which,
+                    clearly, was the opportunity to be trussed up in harnesses and swung around trucks in order to beat
+                    up goons—if only because her sons would enjoy watching mummy wreak some havoc.</p>
+                <br>
+                <p>Abhishek Chaubey’s Dedh Ishqiya wreaks very different havoc. It is a decidedly child-unfriendly film
+                    about conmen hoodwinked by an imperious lesbian with a literary bent of mind. It is a highly nuanced
+                    movie, and Dixit—as the once-wealthy Begum who plays up to men to pay her bills—imbues her character
+                    with a delicacy and a self-aware grace that appears to have eluded every other actress currently in
+                    the business. “The old culture is fast fading,” she said of the world of Hindi cinema. “The
+                    nawabiyat is crumbling to pieces. As things become more ‘new-age,’ there’s no place for characters
+                    with old-world charm, and they try desperately to fit into the new generation.”</p>
+                <br>
+                <p>Dedh Ishqiya is also a film where our most mainstream actress plays a woman who prefers the company
+                    of women—a twist that, while telegraphed subtly enough, is certainly a shock. Dixit assured me she
+                    was never worried about it. “I knew exactly what we were doing. There was a lot of ambiguity to it.
+                    We left it to the viewer to interpret it themselves: it could be two women who were fed up of the
+                    men in their lives and they want to be by themselves, or it could be something else. And I love that
+                    little ambiguity.”</p>
+                <br>
+                <p>Chaubey, whose first “lesbian draft” was wickedly explicit, confessed the script initially gave his
+                    heroine cold feet. But then he realised, while subsequently honing the script, that overt sexuality
+                    would kill the loveliness of the story’s eventual reveal, an angle pegged on Lihaaf, the Urdu writer
+                    Ismat Chughtai’s scandalous classic short story. “She told me about her fears, and I addressed it:
+                    This is exactly how I’m going to treat it. If you’re observant, you’ll get it fairly easily.
+                    However, if you aren’t watching carefully, you don’t get it, and that’s it. It doesn’t harm your
+                    enjoyment of the movie,” said Chaubey, who co-wrote the script with Vishal Bhardwaj. “And then she
+                    was fully on, you know. Unlike Huma”—Huma Qureshi, who plays the object of Dixit’s affections—“who
+                    was very excited and who was constantly talking to me about it—‘How do I touch her? How do I look at
+                    her?’—Madhuri didn’t fuss, she didn’t discuss it too much. However, when shooting, there were
+                    absolutely no inhibitions. She was all systems go.”</p>
+            </div>
+
+            <div class="shop-container">
+                <div class="image"
+                    style="background-image:url(https://m.media-amazon.com/images/I/51s6GwGfNTL._AC_UF1000,1000_QL80_.jpg); width: 100px; height: 100px;">
+                </div>
+            </div>
+            </div>
+
+            <div class="imagescontainer">
+                <div class="boximages" onclick="scaleOnClick(this)"
+                    style="background-image:url(https://cdn.pixabay.com/animation/2023/02/15/12/34/12-34-35-264_512.gif);">
+                </div>
+                <div class="boximages">M</div>
+                <div class="boximages" onclick="showInfoPanel()"
+                    style="background-image:url(https://m.media-amazon.com/images/I/713aqbcXfhL._UF1000,1000_QL80_.jpg);">
+                </div>
+                <div class="boximages" onclick="showInfoPanel2()"
+                    style="background-image:url(https://www.picclickimg.com/7-sAAOSwODlnPiYE/Hits-Of-Madhuri-Dixit-Eros-Bollywood-Song.webp);">
+                </div>
+                <div class="boximages" onclick="showInfoPanel3()"
+                    style="background-image:url(https://th.bing.com/th?q=Saajan%20Bollywood%20Indian%20Audio%20Cassette%20not%20CD%20Nadeem%20Shravan%20Madhuri%20Dixit&w=400&h=400&c=7&pid=1.7&adlt=moderate&t=1);">
+                </div>
+                <div class="boximages" onclick="showInfoPanel4()"
+                    style="background-image:url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPD3pND6qYQaHZc1BBmkP_bMFv9yvg1HBWOw&s);">
+                </div>
+                <div class="boximages">D</div>
+                <div class="boximages"
+                    style="background-image:url(https://i.ytimg.com/vi/Eqhk9Ob5FWo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBpS1OuorJcKDYxH8F_l12zkK9QUA);"></div>
+           </div>
+
+        </div>
+
+        <div class="background-container-2">
+
+            <div class="side-bar">
+                <div class="madhuri-box-container">
+                    <div class="madhuri-box"
+                        style="background-image: url(https://i.pinimg.com/736x/59/db/1d/59db1dec44c9ba7c5bdf87e051165cc1.jpg); background-size: cover;"
+                        onclick="changeBackground('https://i.pinimg.com/736x/59/db/1d/59db1dec44c9ba7c5bdf87e051165cc1.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://media.assettype.com/filmcompanion%2F2024-03%2F13eff457-f50c-4e79-8a18-9d98930d6006%2FElubSG2XIAAwPPv.jpg); background-size: cover;"
+                        onclick="changeBackground('https://media.assettype.com/filmcompanion%2F2024-03%2F13eff457-f50c-4e79-8a18-9d98930d6006%2FElubSG2XIAAwPPv.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://pbs.twimg.com/media/FVgURvzUUAIoBTe.jpg:large); background-size: cover;"
+                        onclick="changeBackground('https://pbs.twimg.com/media/FVgURvzUUAIoBTe.jpg:large')"></div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://c4.wallpaperflare.com/wallpaper/425/201/190/women-model-actress-face-necklace-hd-wallpaper-preview.jpg); background-size: cover;"
+                        onclick="changeBackground('https://c4.wallpaperflare.com/wallpaper/425/201/190/women-model-actress-face-necklace-hd-wallpaper-preview.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://d3lzcn6mbbadaf.cloudfront.net/media/details/FwAbJOOaIAA24b1.jpg); background-size: cover;"
+                        onclick="changeBackground('https://d3lzcn6mbbadaf.cloudfront.net/media/details/FwAbJOOaIAA24b1.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://images.mid-day.com/images/images/b-town-specials/rare-images-of-madhuri-dixit/mads-solo.jpg); background-size: cover;"
+                        onclick="changeBackground('https://images.mid-day.com/images/images/b-town-specials/rare-images-of-madhuri-dixit/mads-solo.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://e0.pxfuel.com/wallpapers/264/157/desktop-wallpaper-madhuri-dixit-lip-bollywood.jpg); background-size: cover;"
+                        onclick="changeBackground('https://e0.pxfuel.com/wallpapers/264/157/desktop-wallpaper-madhuri-dixit-lip-bollywood.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://i.pinimg.com/550x/d6/2b/ab/d62bab888753d4a87c35a40c3b16c127.jpg); background-size: cover;"
+                        onclick="changeBackground('https://i.pinimg.com/550x/d6/2b/ab/d62bab888753d4a87c35a40c3b16c127.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://www.tuhin.world/wp-content/uploads/2024/07/pxfuel-2.jpg); background-size: cover;"
+                        onclick="changeBackground('https://www.tuhin.world/wp-content/uploads/2024/07/pxfuel-2.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://i.pinimg.com/736x/8d/a6/c6/8da6c6f5b57b22e705134a4e11298b2c.jpg); background-size: cover;"
+                        onclick="changeBackground('https://i.pinimg.com/736x/8d/a6/c6/8da6c6f5b57b22e705134a4e11298b2c.jpg')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://preview.redd.it/gfx8hdtu74b71.gif?width=540&auto=webp&s=8e3bfd7c19b1827225c2a8defecf375f1649f2e4); background-size: cover;"
+                        onclick="changeBackground('https://preview.redd.it/gfx8hdtu74b71.gif?width=540&auto=webp&s=8e3bfd7c19b1827225c2a8defecf375f1649f2e4')">
+                    </div>
+                    <div class="madhuri-box"
+                        style="background-image: url(https://www.koimoi.com/wp-content/new-galleries/2024/08/hum-aapke-hain-koun-re-release-box-office-01.jpg); background-size: cover;"
+                        onclick="changeBackground('https://www.koimoi.com/wp-content/new-galleries/2024/08/hum-aapke-hain-koun-re-release-box-office-01.jpg')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="background">
+                <div class="title">WHAT MADHURI DID NEXT</div>
+                <div class="purple-heart"></div>
+                
+            
+            </div>
+
+
+            <div class="scroll-container"
+                style="width: 400px; height: 115px; position: absolute; bottom: 0px; left: 750px; background-color: rgb(255, 84, 218); background-size: cover; ">
+                
+                <p style="color: #f7f7f7;"> DURING HER ALL-CONQUERING 1990S, it was easy to draw parallels between Dixit
+                    and Julia Roberts—another amazingly successful star with an iconic smile and paychecks as big as the
+                    boys—but things have changed. In Dedh Ishqiya, Dixit’s performance shows just how far she has
+                    travelled, from heroine to actress. Somewhere in the mid 1990s—between Beta and 1994’s Anjaam—she
+                    grew aware of the breadth of her narrative range, and began to steer clear of false notes. Now, with
+                    an increased capacity for risk, she may be able to sculpt more complicated characters and mature
+                    performances. To extend the Hollywood analogy, the eventual parallel for Dixit would be Meryl
+                    Streep, who is both a veteran revered for her acting, and still a leading lady. A Meryl Streep film,
+                    too, never quite remains a small film.</p>
+                <br>
+                <p style="color: #f7f7f7;"> Dixit yelped at the mention of Streep. “That’s a big shoe to fill, though. I
+                    just want to be different. I want to surprise with each film I do next.” As we spoke of her
+                    Hollywood influences, Streep “obviously” is the first name she took, but her choice of the second
+                    struck me as telltale. “The new girl, Jennifer Lawrence. She just gets into whatever role she’s
+                    playing and she’s so young and it’s crazy.”</p>
+                <br>
+                <p style="color: #f7f7f7;"> The very fact that she cited a twenty-three-year-old wunderkind as an
+                    influence indicated how serious Dixit is about avoiding motherly roles. She might not have to. Dixit
+                    came of age at a time when the “heroine-oriented film” was box-office blasphemy, but recent trends
+                    in cinema, including the success of actresses such as Vidya Balan in 2012’s Kahaani, and Kangna
+                    Ranaut in 2014’s Queen, have created hope that the mainstream has evolved.</p>
+
+            </div>
+
+            <div class="scroll-container"
+                style="width: 400px; height: 115px; position: absolute; bottom: 0px; left: 1150px; background-size: cover; ">
+                
+                <p> Dixit also said she believed that women are now getting more textured parts. “She plays a character
+                    now. It’s not just a revenge drama, and she’s not either avenger or victim, which is what
+                    heroine-oriented films used to mean.” She was also most gratified that female characters no longer
+                    have to justify whatever ambitions they might have. “Earlier you had to think that abhi aesa
+                    dikhaaenge toh (if we frame it this way) audience might not like it. There’s a sick brother and uske
+                    liye kucch karna hai (something has to be done for him), and that’s why she’s a cabaret dancer.”</p>
+                br>
+                <p> A pivotal development in aid of extraordinary performers and performances in the current cinema is
+                    the fact that hits and flops don’t matter as much as they used to. Now, an actress can feature in a
+                    critically appreciated flop, and use the momentary acclaim to springboard toward her next project,
+                    ideally one with more visibility. This is not a foolproof method, but there are now more chances and
+                    better odds for talented actresses to succeed. Newspapers and magazines now look beyond the usual,
+                    starry suspects when measuring out the plaudits: in Irrfan Khan, Rajkumar Rao and Nawazuddin
+                    Siddiqui, we are beginning to see the rise of the unconventional leading man. There are no
+                    Streep-style roles in Hindi cinema quite yet, but if Dixit were to succeed in her way, we might
+                    finally have the superheroine we have always longed for.</p>
+            </div>
+
+
+        </div>
+
+    
+        <img src="https://pngimg.com/d/rose_PNG654.png" alt="roseright" width="25%" height="40%"
+            style="position: absolute; right:-10%; bottom: -15%; rotate: -340deg;">
+
+        <img src="https://cdn.pixabay.com/animation/2023/02/15/12/34/12-34-35-264_512.gif" alt="red heart gif" width="7%"
+            height="10%">
+
+        <img src="/page-2/images-2/Screenshot 2024-12-12 at 1.13.50 AM.png" alt="wikipedia" width="12%" height="37%"
+            style="position: absolute; right:57.5%; bottom: 15%;  border-bottom: ridge 6px rgb(60, 60, 60); border-right: ridge 6px rgb(255, 255, 255); border-left: ridge 6px rgb(217, 217, 217);border-top: ridge 6px rgb(217, 217, 217); ">
+
+        <img src="https://freepngimg.com/save/72396-priyanka-bollywood-chopra-actor-yakeen-free-download-png-hq/504x714"
+            alt="priyanka" width="18%" height="40%" style="position: absolute; right: 0.5%; top: 70%; rotate: -340deg;">
+            
+        <img src="https://pngimg.com/d/rose_PNG654.png" alt="roseleft" width="25%" height="40%"
+            style="position: absolute; right:57%; bottom: -15%; rotate: -340deg;">
+
+        <img src="https://upload.wikimedia.org/wikipedia/mai/d/d8/Filmfare_Trophy.png" alt="award" width="20%"
+            height="40%" style="position: absolute; right:50%; bottom: -15%; rotate: -340deg;">
+
+        <div class="infopanel">
+            <p style="color: #f7f7f7;"> IT IS A CAREER that took off with an advertisement.Screen India was the most
+                powerful industry publication through the 1970s and 1980s; for a considerable part of this time, its
+                third-page advertisement was the hottest real estate in Hindi film publicity, reserved largely for paid
+                announcements for films celebrating a grand theatrical run, or first posters for films with whopping
+                budgets. It was, therefore, rather startling to see a dramatic six-page ad starting on page three
+                “launching” a heroine who wasn’t merely unknown, but unknown because her first five films had flopped.
+            </p>
+            <br>
+            <p style="color: #f7f7f7;"> In 1984, aged seventeen, Madhuri Dixit did a tiny film called Abodh, opposite
+                the Bengali actor Tapas Pal, which sank without a trace. So did her next four films. During the shoot
+                for Awara Baap, the second of these flops, however, she met Subhash Ghai. Ghai, a hugely successful
+                director who was bulletproof at the box office for two decades straight—from the 1980 release Karz to
+                the 1999 Taal—glimpsed something special in her. “When I first met her in Kashmir,” he said, remembering
+                a trip to scout locations for his 1986 multi-starrer Karma, “she was playing some very small role as
+                Rajesh Khanna’s daughter. A hairstylist, Khatoon, who had worked with me on Karz, came to greet me and
+                said, ‘Ek chhoti ladki hai, side-role kar rahi hai’ (There’s this little girl, doing side-roles)—and she
+                introduced me. Patli si ladki thi” (She was a slim sort of girl).</p>
+            <br>
+            <p style="color: #f7f7f7;"> Ghai was impressed by the slim girl’s face, one he recalled as “absolutely
+                photogenic,” and by her persona, “well-mannered, cultured and innocent.”</p>
+
+            <p style="color: #f7f7f7;"> “She was an unpolluted actor,” he said, “and I had the confidence that I could
+                shape her into a star. So I took her on as a project.” Ghai spoke of this phase as “re-erecting” Dixit’s
+                career, because he discarded her flops outright, refusing to even watch them. “I told her, ‘I am making
+                this film called Karma, and after finishing this film, in one year, I will make a film properly to
+                launch you.’ I wanted to sign her to a five-year contract so I could groom her properly, and all I
+                wanted was her loyalty.”</p>
+            <br>
+            <p style="color: #f7f7f7;"> Ghai shot a quick showreel with Dixit, sending it to eight producers and
+                directors. “Ramesh Sippy, Indra Kumar, Shashi Kapoor Productions … Everyone I knew well. I said to them
+                that ‘If you think this face, this video is okay, then contact me. I am signing this girl and if you
+                want to sign her, send me a cheque for Rs 5,000.” By the end of the week, Ghai had eight cheques,
+                following which he took out his historic advertisement. Ghai summarised it thus: “This girl who was a
+                flop yesterday is blooming today and will be a superstar tomorrow.”</p>
+            <br>
+        </div>
+
+        <div class="infopanel-2">
+            <p style="color: #f7f7f7;"> “She had become a flop heroine,” the trade analyst Amod Mehra recalled. “But
+                what a launch that was! Six pages continuous in Screen? When nobody had even heard of her? It made her
+                career.” Ghai’s coup de grâce was the ad’s final page, emblazoned with the names of the eight producers
+                who had already signed the relatively untested actress. Thus, Dixit became a sensation well before she
+                stepped forth as Ghai’s heroine.</p>
+            <br>
+            <p style="color: #f7f7f7;"> Then, like a much-shaken fizzy drink finally uncorked, came the stream of hits.
+                First Dayavan, Tezaab (1988), then Tridev, Parinda and Ghai’s own Ram Lakhan (1989). From this point,
+                there was no stopping Dixit, who got stronger with each successive triumph. The film industry reacted
+                the only way it knew how: as a herd. Dixit had nine releases in 1989 and ten in 1990. Everyone wanted
+                her.</p>
+            <br>
+            <p style="color: #f7f7f7;"> “If you wanted histrionics,” Mehra said, trying to sum up what producers felt at
+                the time, “Madhuri Dixit was your number one choice. Very quickly, in the 1990s, everyone started
+                comparing her with Madhubala, as a beauty who could charm anybody. But Madhuri grew as an actress
+                besides just being a star.” Mehra dismissed any serious competition to her at the time. “Sridevi was a
+                great comic actress, but that was it. She was a very commercial heroine. For big masala movies people
+                wanted Sridevi, but when they had a role that needed acting, they had to have Madhuri. She had an edge;
+                everyone felt she was the complete Indian woman.”</p>
+            <br>
+            <p style="color: #f7f7f7;"> “Madhuri Dixit is the most solid man I’ve met in the industry,” Shah Rukh Khan
+                told Filmfare magazine in 2006. “Yeah, you heard right. She’s truly like a man. She’s the most solid
+                thinker, the most solid emotionally, a solid believer. And of course, her talent is unquestionable. From
+                her I’ve learnt the most.” Evidently one of those overachievers who believe that comparing a woman to a
+                man is the ultimate compliment to her, Khan told the magazine that he merely followed Dixit’s lead. From
+                a famously cocky star, who knowingly plays the charming narcissist in public, this was a telling
+                compliment: “She is the only one I feel I am not as good as.”</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> Dixit’s first “hit pairing,” in tabloid parlance, came with Anil Kapoor, with
+                whom she acted in hits like Tezaab, which was her breakthrough movie. The duo became a golden ticket for
+                producers, and collaborated sixteen times, most recently on Pukar in 2000. But all was not peaches and
+                moustaches. One of their biggest films together, Beta, in 1992, cast Kapoor in the unflattering role of
+                a bullied simpleton, and Dixit as his firebrand wife, defiantly challenging her husband’s mother. Dixit,
+                eyes blazing, was the most striking thing about the film, especially while melting the screen during the
+                suggestive song ‘Dhak dhak karne laga.’ “Beta should have been called ‘Beti,’ people tell me,” Dixit
+                said, and smiled nonchalantly at me. Amod Mehra, however, said that Kapoor had not enjoyed the fact that
+                Dixit walked away with the lion’s share of the applause.</p>
+
+            <br>
+        </div>
+
+        <div class="infopanel-3">
+            <p style="color: #f7f7f7;"> Kapoor wasn’t the only leading man wary of, well, being led. “She only started
+                Dil because Anil didn’t have dates at the time, and Aamir”—Aamir Khan, who had a string of unsuccessful
+                films following his 1988 debut hit, Qayamat Se Qayamat Tak—“was a nobody,” Mehra explained. Dil,
+                released in 1990, was a great success. “So another hit pair was born. But once she became a superstar,
+                the biggest heroine … Anil pushed for actresses like Urmila”—Urmila Matondkar—“and Sridevi in films like
+                Judaai, while Aamir was picking actresses like Manisha Koirala”—in the 1995 Akele Hum Akele Tum. “Nobody
+                wanted to take on Madhuri anymore.”</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> Even if these actors weren’t threatened by Dixit herself, they might have had
+                something to say regarding the characters she played. Most were canny, independent girls, bright
+                students or feisty professionals, who suffered little foolishness, especially from leading men.
+                Mainstream directors such as Ghai—even on the loud, testosterone-filled Khalnayak, ostensibly a vehicle
+                for Sanjay Dutt—always made sure they wrote a meaty part for Dixit.</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> By the mid 1990s, Dixit was queen. She had the films, the roles, and the
+                audiences she wanted. Once it became clear to producers that her name on a marquee resulted in that
+                all-important box-office opening, she began to render her heroes redundant. For Hum Aapke Hain Koun, for
+                example, not only did she enjoy a higher billing than the hero, Salman Khan, but—according to a recent
+                article in the Indian Express—she was paid a then-astronomical Rs 2.7 crore for the film, more than
+                almost anybody else at the time.</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> “This is what happens when the heroine becomes bigger than the hero,” Mehra
+                said. “Stories and films have to be built around her stature. So they become heroine-oriented
+                films—which then don’t work at the box office.” This did not mean that independent, intelligent female
+                characters were rejected by the audiences of the 1990s. On the contrary, actresses such as Kajol and
+                Manisha Koirala brought nerve and audacity to their best roles in this period—but, according to
+                conventional industry wisdom at the time, the characters they played belonged alongside even stronger
+                male leads. Sexism, then as now, ran deep in the industry. (To this day, male stars cherry-pick the
+                actresses they work with. )</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> Treading on her heroes’ toes ought to have signalled Dixit’s imminent downfall
+                in the second half of the decade, but she avoided the precipice in defiantly heroic fashion. She began
+                to do what only the heroes do—working with younger co-stars, and taking charge of the commercial reins
+                of her films.</p>
+        </div>
+
+        <div class="infopanel-4">
+            <p style="color: #f7f7f7;"> Dixit broke new ground carousing with a young Akshaye Khanna in 1997’s Mohabbat,
+                nine years after audiences saw her being pinned down by Khanna’s father, Vinod, in Dayavan. Hindi cinema
+                is notoriously unfair to ageing actresses, first relegating them to the dreaded sister and mother roles,
+                and eventually forgetting them entirely. (Rakhi Gulzar, for instance, played Amitabh Bachchan’s lover in
+                Barsaat Ki Ek Raat in 1981, before playing his mother in Shakti just a year later.) But Dixit had broken
+                on through. As producers inevitably bowed to her box-office potential, she hiked her fees to rub
+                shoulders with the highest-paid men—and got what she asked for.</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> “I’m proud I did it because it paved the path for others to follow,” Dixit told
+                me. “And when you do something groundbreaking, there’s always a risk. But I think I was always clear
+                what I wanted to be, where I wanted to be, and where I wanted women in cinema to be. So that always
+                dictated my choices, whether it was the pricing or the choice of films, I wanted it to be the best and I
+                thought I deserved the best.”</p>
+
+            <br>
+            <p style="color: #f7f7f7;"> Dixit’s ceiling-shattering act did not, however, pave the path for other women.
+                Even today, the most feted heroines, such as Deepika Padukone and Kareena Kapoor, are paid less than
+                half of what even a second-rung hero—think Shahid Kapoor or Imran Khan—makes per film. That Dixit
+                managed to achieve—and, on occasion, exceed—parity in an industry so irredeemably sexist is a testament
+                to her singular star-power.</p>
+        </div>
+
+    </div>
+
+    <script>
+    
+        function changeBackground(imageUrl) {
+       
+            const backgroundElement = document.querySelector('.background');
+           
+            backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+        }
+
+        function scaleOnClick(element) {
+            
+            element.style.transform = "scale(2)";
+            
+            setTimeout(() => {
+                element.style.transform = "scale(1)";
+            }, 1000); 
+        }
+
+        function showInfoPanel() {
+            var infoPanel = document.querySelector('.infopanel');
+
+            infoPanel.classList.toggle('show');
+
+        }
+
+        function showInfoPanel2() {
+            var infoPanel = document.querySelector('.infopanel-2');
+
+            infoPanel.classList.toggle('show');
+
+        }
+
+        function showInfoPanel3() {
+            var infoPanel = document.querySelector('.infopanel-3');
+
+            infoPanel.classList.toggle('show');
+
+        }
+
+        function showInfoPanel4() {
+            var infoPanel = document.querySelector('.infopanel-4');
+
+            infoPanel.classList.toggle('show');
+
+        }
+
+    </script>
+
+</body>
+
+</html>

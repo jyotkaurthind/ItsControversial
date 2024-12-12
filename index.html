@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+.responsive {
+  max-width: 100%;
+  height: auto;
+}
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        max-width: 100%;
+        overflow:hidden;
+    }
+
+    @font-face {
+        font-family: Gemini-Regular;
+        src: url(Fonts/Gemini-Regular.otf);
+    }
+
+    @font-face {
+        font-family: Akzidenz;
+        src: url(Fonts/AkzidenzGrotesk/AkzidenzGrotesk-MediumCond.otf);
+    }
+
+    /* @font-face {
+        font-family: MsSans;
+        src: url(/Fonts/ms-sans-serif-1.otf/ms-sans-serif-1.otf);
+    } */
+
+    .title {
+        font-size: 180px;
+        font-family: Gemini-Regular;
+        justify-content: center;
+        text-align: center;
+        color: rgb(255, 70, 184);
+        text-shadow: rgb(0, 60, 255) 2px 2px;
+        padding-top: 10px;
+        /* background-color: rgb(255, 255, 255); */
+        /* mix-blend-mode: hard-light; */
+    }
+
+    body{
+        /* background-image: url(images/AishwaryaBackground.jpg); */
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+    }
+
+    .background-container{
+        /* margin: 10px 10px 10px; */
+        background-color: #e1e1e1;
+        padding-top: 5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 95vh;
+        display: flex;
+    }
+    .background-container2{
+        /* margin: 10px 10px 10px; */
+    
+        background-color: #e1e1e1;
+        padding-top: 30px;
+        border-top: ridge 3px #b5b5b5;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 150vh;
+        display: flex;
+    }
+
+    .top-bar{
+        background-color: #d1d1d1;
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(161, 161, 161);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 770px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 21px;
+        font-family: MS sans ;
+    }
+
+    .cross-box{
+        background-color: #bababa;
+        background-image: url( "https://img1.picmix.com/output/stamp/normal/8/1/2/0/2500218_ff2e5.gif" );
+        background-size: cover;
+        border-top: ridge 3px #7a7a7a;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(217, 217, 217);
+        width: 40px;
+        height: 40px;
+        /* display: flex;
+        justify-content: left; */
+    }
+
+    .cross-box-2{
+        background-color: #bababa;
+        background-size: cover;
+        border-top: ridge 3px #7a7a7a;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(255, 255, 255);
+        border-left: ridge 4px rgb(217, 217, 217);
+        width: 40px;
+        height: 40px;
+        /* display: flex;
+        justify-content: left; */
+    }
+
+    .background{
+        border-top: ridge 3px #676767;
+        border-bottom: ridge 4px rgb(255, 255, 255);
+        border-right: ridge 4px rgb(223, 223, 223);
+        border-left: ridge 4px rgb(147, 147, 147);
+        background-image: url(images/AishwaryaBackground_enhanced.jpg);
+        background-size: cover;
+        width: 100%;
+        height: 88vh;
+    }
+
+    .sub-title{
+        font-family: Akzidenz;
+        font-size: 50px;
+        color: rgb(255, 195, 243);
+        text-shadow: rgb(0, 0, 0) 2px 2px;
+        /* background-color: rgb(0, 0, 0); */
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .headlines{
+        font-family: Akzidenz;
+        font-size: 50px;
+        color: rgb(255, 195, 243);
+        text-shadow: rgb(0, 0, 0) 2px 2px;
+        /* background-color: rgb(0, 0, 0); */
+        padding-left: 10px;
+        padding-right: 10px;
+        background-color: rgb(254, 221, 253);
+      border-top: ridge 3px #676767;
+      border-bottom: ridge 4px rgb(255, 255, 255);
+      border-right: ridge 4px rgb(223, 223, 223);
+      border-left: ridge 4px rgb(147, 147, 147);
+    }
+
+    .pin-img{
+        position: absolute;
+        width: 250px;
+        
+    }
+
+    .infopanel {
+        padding: 20px;
+        background-color: rgb(232, 213, 235);
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(60, 60, 60);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 20%;
+        height: 30%;
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transition: opacity 0.3s ease, visibility 0s 0.3s;
+        overflow-y: auto;
+    }
+
+
+    .infopanel::-webkit-scrollbar {
+        width: 15px;
+    }
+
+    .infopanel::-webkit-scrollbar-track {
+        background: #f1f1f1;
+
+    }
+
+    .infopanel::-webkit-scrollbar-thumb {
+        background: #a0a0a0;
+        border-top: ridge 2px #cdcdcd;
+        border-bottom: ridge 2px rgb(211, 211, 211);
+        border-right: ridge 2px rgb(255, 255, 255);
+        border-left: ridge 2px rgb(217, 217, 217);
+    }
+
+    .infopanel.show {
+        visibility: visible;
+        opacity: 1;
+        transition: opacity 0.3s ease, visibility 0s 0s;
+    }
+
+    .sub-top-bar {
+        background-color: #d1d1d1;
+        border-top: ridge 3px #f7f7f7;
+        border-bottom: ridge 4px rgb(161, 161, 161);
+        border-right: ridge 4px rgb(82, 82, 82);
+        border-left: ridge 4px rgb(147, 147, 147);
+        width: 100%;
+        height: 60px;
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 70px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 15px;
+        font-family: MsSans;
+    }
+
+    .hoverable-text {
+    cursor: pointer; /* Changes the cursor to a hand pointer */
+}
+
+</style>
+<body>
+
+    <div class="top-bar">
+        <div class="cross-box"></div>
+        <div>It's Controversial</div>
+        <div class="cross-box"></div>
+    </div>
+
+    <div class="sub-top-bar" style=" height: 30px; border-bottom: ridge 0px rgb(207, 207, 207);">
+        <div> </div>
+        
+        <div class="hoverable-text" onclick="showInfoPanel()">(About)</div>
+        <div></div>
+    </div>
+    
+
+<div class="background-container">
+    <!-- <div class="background-container2"> -->
+    <div class="background">
+   
+    <div class= "title">IT'S CONTROVERSIAL</div>
+        <img src="images/pin1.png" alt="pin1" class="pin-img" style="top:400px; right:300px">
+        <img src="images/pin4.png" alt="pin4" class="pin-img" style="top:600px; left:500px">
+        <img src="images/pin3.png" alt="pin3" class="pin-img" style="top:400px; left:200px">
+        <!-- <img src="images/c4.png" alt="pin3" class="pin-img">
+        <img src="images/c5.png" alt="pin3" class="pin-img"> -->
+        <img src="images/c6.png" alt="pin3" class="pin-img" style="width:15%; top:400px; left:1500px; transform: rotate(300deg);">
+        <img src="images/pin7.png" alt="pin3" class="pin-img" style="width:10%; top:300px; left:1500px; transform: rotate(300deg);">
+        <img src="images/pin9.png" alt="pin3" class="pin-img" style="width:10%; top:500px; left:700px; transform: rotate(300deg);">
+        <img src="images/pin10.png" alt="pin3" class="pin-img" style="width:10%; top:400px; left:1100px; transform: rotate(340deg);">
+        <img src="images/Aishwarya Rai3.jpg" alt="pin3" class="pin-img" style="width: 15%; border-top: ridge 3px #676767; border-bottom: ridge 4px rgb(255, 255, 255);  border-right: ridge 4px rgb(223, 223, 223); border-left: ridge 4px rgb(147, 147, 147); top:900px; right:100px; transform: rotate(20deg);">
+        <img src="images/Aishwarya Rai2.jpg" alt="pin3" class="pin-img" style="width: 15%; border-top: ridge 5px #676767; border-bottom: ridge 5px rgb(255, 255, 255);  border-right: ridge 5px rgb(223, 223, 223); border-left: ridge 5px rgb(147, 147, 147);">
+        <!-- <img src="https://www.pngarts.com/files/1/Hair-Clip-Free-PNG-Image.png" alt="pin3" class="pin-img" style="width: 20%; transform: rotate(300deg); left: 600px;"> -->
+        <img src="images/Madhurimag.jpg" alt="pin3" class="pin-img" style="width: 20%; top:600px; left:100px; transform: rotate(345deg);">
+        <!-- <img src="images/c1.png" alt="pin3" class="pin-img" style="width: 15%; top:400px; left:400px; transform: rotate(345deg); "> -->
+        <img src="images/heartgif.gif" alt="pin3" class="pin-img" style="width: 20%; top:680px; left:950px; ">
+        <!-- <img src="page-1/images/61KlCqn10bL.png" alt="pin3" class="pin-img" style="width: 15%; top:400px; right:0px; transform: rotate(345deg); "> -->
+        <!-- <img src="images/Priyankachopra.jpg" alt="pin3" class="pin-img" style="width: 15%; top:1500px; right:100px; "> -->
+        <!-- <img src="images/hrithik.jpg" alt="pin3" class="pin-img" style="width: 25%; top:1500px; border: 5px solid rgb(213, 99, 255) "> -->
+        <!-- <img src="images/shahid-kareena_0.jpeg" alt="pin3" class="pin-img" style="width: 35%; top:1600px; left: 500px; border: 5px solid rgb(213, 99, 255) "> -->
+        <img src="images/pin2.png" alt="pin3" class="pin-img" style="top:300px; right:700px; width: 100px">
+        <!-- <img src="images/10367055_bb446.gif" alt="pin3" class="pin-img" style="width: 15%; top:1000px; right:100px; "> -->
+        <img src="images/pin11.png" alt="pin3" class="pin-img" style="width:10%; top:800px; left:50px; transform: rotate(340deg);">
+        <!-- <img src="https://cdn.icon-icons.com/icons2/3933/PNG/512/pink_windows_pink_folder_folder_icon_250634.png" alt="pin3" class="pin-img" onclick="showInfoPanel()" style="width:5%; top:300px; left:300px;"> -->
+
+        <a href="page-2/"> 
+            <img src="https://cdn.icon-icons.com/icons2/3933/PNG/512/pink_windows_pink_folder_folder_icon_250634.png" alt="pin3" class="pin-img" style="width:5%; top:300px; left:300px;">
+         </a>
+    
+        
+        <div class="infopanel">
+            <p> 
+                This website serves as an evolving archive and curation, delving into the multifaceted portrayal of femininity in Bollywood. It brings together a collection of images, objects, articles, and media that explore the feminine role in Indian cinema, its evolution, and its cultural impact. With a special focus on the prominent era of 2000s Bollywood, the collection celebrates the 'icons', romantic narratives, and the shifting dynamics of gender representation within this  industry. It’s a celebration of the grace, and complexity of women in Bollywood, offering insights into how they have shaped and been shaped by its cinematic traditions.
+            </p>
+            
+        </div>
+
+  <!-- <div class= "sub-title" style="font-size: 150px; color: rgb(0, 255, 174); text-align: center; text-shadow: 2px 2px 2px rgb(0, 0, 0);">GET BOLLYWOOD'S HOTTEST SPICIEST GOSS</div> -->
+        <!-- <div class= "headlines" style="position: absolute; top:1000px; left:0px;background-color: rgb(255, 255, 255);">What Madhuri Dixit did next</div>
+        <div class= "headlines" style="position: absolute; top:1000px; left:0px;background-color: rgb(255, 255, 255);">From Scene-Stealing Ingenue To Pinup Goddess</div> -->
+        <!-- <div class= "headlines" style="position: absolute; top:1500px; left:0px; background-color: rgb(216, 142, 255);">Learn the Truth About Bollywood Romance!</div> -->
+    </div>
+</div>
+</div>
+
+<script>
+    // Function to change the background image
+    function changeBackground(imageUrl) {
+        // Get the background element
+        const backgroundElement = document.querySelector('.background');
+        // Set the background image to the clicked image's URL
+        backgroundElement.style.backgroundImage = `url(${imageUrl})`;
+    }
+
+    function showInfoPanel() {
+            var infoPanel = document.querySelector('.infopanel');
+
+            // Toggle the 'show' class to trigger visibility change
+            infoPanel.classList.toggle('show');
+
+        }
+
+    </script>
+    
+
+</body>
+</html>
+
